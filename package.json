@@ -1,0 +1,13 @@
+{
+  "name": "@cy/cambridge",
+  "version": "0.9.0",
+  "description": "hook functions in class/object without touching the source code",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["aop", "hook"],
+  "author": "compilelife",
+  "license": "ISC"
+}
