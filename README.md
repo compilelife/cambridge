@@ -18,7 +18,7 @@ Support insert code before/after functions. Or replace whole function directly.
 
 假设有这样的一个类
 
-Assuming that we have a class like:
+Suppose that we have a class like:
 
 ```js
 class SealedClass {
@@ -110,7 +110,7 @@ o2.sum(2, 3)
 
 当然也可以只影响一个实例
 
-We surely can hook just one intance
+We can also hook to a specific instance
 
 ```js
 const o1 = new SealedClass()
