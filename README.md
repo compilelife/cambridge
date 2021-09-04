@@ -48,7 +48,7 @@ obj.sum(1, 2)
 
 ## after
 
-类似地，我们也可以打印在函数执行后，获取计算结果
+类似地，我们也可以在函数执行后，打印计算结果
 
 Similarly, we can print it's return value after execution.
 
@@ -67,7 +67,7 @@ obj.sum(1, 2)
 
 ## replace
 
-如果需要包裹一个函数，可以替换它
+如果需要包裹一个函数，可以直接替换它
 
 If you want to 'wrap' a function, just replace it.
 
