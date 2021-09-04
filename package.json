@@ -1,13 +1,16 @@
 {
-  "name": "@cy/cambridge",
-  "version": "0.9.0",
+  "name": "@compilelife/cambridge",
+  "version": "1.0.0",
   "description": "hook functions in class/object without touching the source code",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./test.js"
   },
   "keywords": ["aop", "hook"],
   "author": "compilelife",
-  "license": "ISC"
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  }
 }
