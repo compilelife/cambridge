@@ -1,6 +1,3 @@
-//todo:
-//添加.d.ts
-//发包
 function createInjectPoint(obj, method) {
     let target = obj
     if (!(method in target)) {
@@ -11,14 +8,21 @@ function createInjectPoint(obj, method) {
         throw `${method} not in obj`
     }
 
-    return {target, origin:target[method]}
+    const origin = target[method]
+
+    const wayBack = '__cam_'+method
+    if (!target[wayBack]) {
+        target[wayBack] = origin
+    }
+
+    return {target, origin}
 }
 
 module.exports = {
     before(obj, method, inject) {
         const {target, origin} = createInjectPoint(obj, method)
         target[method] = function () {
-            inject(this)
+            inject(this, ...arguments)
             origin.call(this, ...arguments)
         }
     },
@@ -35,6 +39,14 @@ module.exports = {
         const {target, origin} = createInjectPoint(obj, method)
         target[method] = function() {
             return inject(this, origin, ...arguments)
+        }
+    },
+
+    leave(obj, method) {
+        const {target} = createInjectPoint(obj, method)
+        const wayBack = '__cam_'+method
+        if (target[wayBack]) {
+            target[method] = target[wayBack]
         }
     }
 }
