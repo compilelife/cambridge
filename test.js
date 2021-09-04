@@ -11,6 +11,9 @@ class SealedClass {
     minus(a, b) {
         return a - b
     }
+    static print() {
+        console.log('static function')
+    }
 }
 
 //Test & Usage
@@ -66,6 +69,11 @@ const tests = [
         const obj = new SealedClass()
         obj.sum(1,2)
         obj.minus(1,2)
+    },
+    function staticFunc() {
+        cam.before(SealedClass, 'print', ()=>console.log('before static'))
+
+        SealedClass.print()
     }
 ]
 
