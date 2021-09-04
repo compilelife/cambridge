@@ -1,6 +1,6 @@
 > 轻轻的我走了，正如我轻轻的来 —— 徐志摩《再别康桥》
 
-> Very quietly I take my leave, As quietly as I came here;
+> Very quietly I take my leave, As quietly as I came here —— Xu Zhimo 《Saying Good-bye to Cambridge Again》
 
 这个库实现了对函数的非侵入式修改。
 
