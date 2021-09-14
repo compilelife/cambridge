@@ -23,7 +23,7 @@ module.exports = {
         const {target, origin} = createInjectPoint(obj, method)
         target[method] = function () {
             inject(this, ...arguments)
-            origin.call(this, ...arguments)
+            return origin.call(this, ...arguments)
         }
     },
     
@@ -31,7 +31,8 @@ module.exports = {
         const {target, origin} = createInjectPoint(obj, method)
         target[method] = function () {
             const result = origin.call(this, ...arguments)
-            inject(this, result)
+            returninject(this, result)
+            return result
         }
     },
     
